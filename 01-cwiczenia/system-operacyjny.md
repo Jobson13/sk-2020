@@ -32,6 +32,30 @@
 4. Dlaczego umiejętnosci z zakresu sieci komputerowych mogą mi się przydać? :)
 
 
+Zadanie 1
+### Charakterystyka systemu operacyjnego Linux Alpine
+
+| Charakterystyka           | wartość               | komentarzu                |
+| -------------             |:-------------:        | -----:                    |
+| nazwa                     | Linux                 | Alpine 3.11.3             |
+| cfg interfejsów           |                       |                           |
+| program (parametry sieci) |                       |                           |
+| ....                      | .....                 |                           |
+| nazwa                     | Alpine Linux          |                           |
+| Konfiguracja ip           | ip addr show          | Wypisuje karty i adresy ip| 
+| Tablica routingu          | ip route show         | Można sprawdzić bramę     | 
+| check nameservers (DNS)   | cat /etc/resolv.conf  | which DNS were set | 
+
+### Konfiguracja połączenia sieciowego w Linux Alpine
+
+| Parametr | wartość           | komentarzu |
+| ------------- |:-------------:| -----:|
+| Adres IP      | 10.0.2.15        | przydzielony przez DHCP |
+| Maska podsieci| 10.0.2.15/**24** | **255.255.255.0**    |
+| Brama         | 10.0.2.2         | default from route table |
+| DNS 1         | 192.168.19.1     | cat /etc/resolv.conf     |
+| DNS 2         | 0.0.0.0          | nslookup uek.krakow.pl   |
+---------------------------------------------------------------
 ### Charakterystyka systemu operacyjnego
 
 | Charakterystyka           | wartość               | komentarzu                |
