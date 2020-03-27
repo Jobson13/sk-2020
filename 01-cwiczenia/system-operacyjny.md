@@ -132,6 +132,17 @@ Zadanie 1
 | Brama         | 192.168.19.1         | default from route table |
 | DNS 1         | 192.168.19.1     | status sieci     |
 | DNS 2         | 0.0.0.0          | nslookup UnKNOW   |
+---------------------------------------------------------------
+
+Zadanie 2
+Drukarka Brother DCP-J152W
+   * Adres - 192.168.19.112
+   * Maska - 255.255.255.0
+   * Adres bramy - 192.168.19.1
+   * DNS 1 - 192.168.19.1
+   * DNS 2 - 0.0.0.0
+  
+    Przygotuj dokumentację graficzną Twojej sieci domowej, uwzględnij adresy i urządzenia
 ### Schemat sieci
 
 aby załączyć obrazek 
