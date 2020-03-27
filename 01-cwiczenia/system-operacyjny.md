@@ -110,28 +110,28 @@ Zadanie 1
  i ma dziwny adres DNS (Adres rutera domowego a nie jak
  w powyższych przypadkach)
 ---------------------------------------------------------------
-### Charakterystyka systemu operacyjnego
+### Charakterystyka systemu operacyjnego Windows 10
 
-| Charakterystyka           | wartość               | komentarzu                |
-| -------------             |:-------------:        | -----:                    |
-| nazwa                     | Windows                  | centos 7                  |
-| cfg interfejsów           | centos 7 | /etc/sysconfig/network-scripts         |
-| program (parametry sieci) | niewiem               |                           |
-| ....                      | .....                 |                           |
-| nazwa                     | Alpine Linux          |                           |
-| Konfiguracja ip           | ifconfig               | show all eth interfaces   | 
-| Tablica routingu          | ip route show         | what is gateway?!         | 
-| check nameservers (DNS)   | ``$ cat /etc/resolv.conf ``  | which DNS were set | 
+| Charakterystyka              | wartość                      | komentarzu                   |
+| ---------------------------- | ---------------------------- | ---------------------------- |
+| nazwa                        | Windows 10                   |    Kompilacja 18363          |
+| cfg interfejsów              |                              |                              |
+| program (parametry sieci)    |                              |                              |
+| ....                         | .....                        |                              |
+| nazwa                        | Windows 10                 |                              |
+| Konfiguracja ip              | ipconfig               | show all eth interfaces   | 
+| Tablica routingu             | ip route show         | what is gateway?!         | 
+| check nameservers (DNS)      | status sieci  | which DNS were set | 
 
 ### Konfiguracja połączenia sieciowego
 
 | Parametr | wartość           | komentarzu |
 | ------------- |:-------------:| -----:|
-| Adres IP      | 10.0.2.15        | przydzielony przez DHCP |
-| Maska podsieci| 10.0.2.15/**24** | **255.255.255.0**    |
-| Brama         | 10.0.2.2         | default from route table |
-| DNS 1         | 10.10.4.204      | cat /etc/resolv.conf     |
-| DNS 2         | 1.1.1.1          | nslookup uek.krakow.pl   |
+| Adres IP      | 192.168.19.110        | przydzielony przez DHCP |
+| Maska podsieci| 192.168.19.110/**24** | **255.255.255.0**    |
+| Brama         | 192.168.19.1         | default from route table |
+| DNS 1         | 192.168.19.1     | status sieci     |
+| DNS 2         | 0.0.0.0          | nslookup UnKNOW   |
 ### Schemat sieci
 
 aby załączyć obrazek 
