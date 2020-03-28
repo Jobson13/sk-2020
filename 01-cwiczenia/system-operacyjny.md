@@ -155,3 +155,5 @@ aby załączyć obrazek
 
 ![my network](network.png)
 
+Zadanie 3 - Gotowe
+Zadanie 4 - Chciałbym pracować z serwerami, tworzyć własne sieci i je użytkować 
