@@ -18,12 +18,12 @@ Wejściowe parametry sieci
 -------------------------
 | Parametr | wartość | komentarz(opcionalny) |
 | ------------- |:-------------:| -----:|
-|   PC 1 |  
-| IP - address  | 10.0.15.4 | |
+|   PC 1 ||  ip addr add 10.0.15.4/24 dev eth0 |
+| IP - address  | 10.0.15.4 |ip addr |
 | MASKA  | /24 (255.255.255.0) | |
 |   |  | |
-| PC 2  |  | |
-| IP - address  | 10.0.15.6 | |
+| PC 2  || ip addr add 10.0.15.6/24 dev eth0 | 
+| IP - address  | 10.0.15.6 | ip addr|
 | MASKA  | /24 (255.255.255.0 )| |
 
 Weryfikacja połączenia
@@ -53,15 +53,14 @@ Wejściowe parametry sieci
 | MASKA  | 255.255.0.0 | |
 
 Weryfikacja połączenia
-
-Polecenie
-```
-```
-
-Efekt
-```
-```
-
+------------------------
+||Maszyna1|Maszyna2|
+| ------------- |:-------------:| -----:|
+|Polecenie|ping 10.0.15.6|ping 10.0.15.4|
+|Efekt|64 bytes from 10.0.15.6|64 bytes from 10.0.15.4|
+|Połączenie|Jest|Jest|
+|Internet|Nie ma|Nie ma|
+-----------------------------
 Nowa statyczna konfiguracja 
 
 -------------------------
@@ -76,14 +75,14 @@ Nowa statyczna konfiguracja
 | MASKA  |  | |
 
 Weryfikacja połączenia
-
-Polecenie
-```
-```
-
-Efekt
-```
-```
+------------------------
+||Maszyna1|Maszyna2.1|Maszyna2.2|
+| ------------- |:-------------:|:-----:|----:|
+|Polecenie|ping 10.0.15.6|ping 10.0.15.4||
+|Efekt|64 bytes from 10.0.15.6|64 bytes from 10.0.15.4||
+|Połączenie|Jest|Jest||
+|Internet|Nie ma|Nie ma||
+-----------------------------
 
 ### Utrwalenie konfiguracji
 
