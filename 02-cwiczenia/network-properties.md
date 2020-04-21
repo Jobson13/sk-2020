@@ -27,14 +27,17 @@ Wejściowe parametry sieci
 | MASKA  | /24 (255.255.255.0 )| |
 
 Weryfikacja połączenia
+------------------------
+||Maszyna1|Maszyna2|
+| ------------- |:-------------:| -----:|
+|Polecenie|ping 10.0.15.6|ping 10.0.15.4|
+|Efekt|64 bytes from 10.0.15.6|64 bytes from 10.0.15.4|
+|Połączenie|Jest|Jest|
+|Internet|Nie ma|Nie ma|
+-----------------------------
 
-Polecenie
-```
-```
+Konfiguracja interfejsów: /etc/network/interfaces
 
-Efekt
-```
-```
 
 Statyczna konfiguracja parametrów połączenia
 Wejściowe parametry sieci
@@ -42,11 +45,11 @@ Wejściowe parametry sieci
 | Parametr | wartość | komentarz(opcionalny) |
 | ------------- |:-------------:| -----:|
 |   PC 1 |  
-| IP - address  | 192.168.10.10 | |
+| IP - address  | 192.168.9.10 | |
 | MASKA  | 255.255.255.0 | |
 |   |  | |
 | PC 2  |  | |
-| IP - address  | 192.168.10.11 | |
+| IP - address  | 192.168.9.11 | |
 | MASKA  | 255.255.128.0 | |
 | PC 2  |  | |
 | IP - address  | 172.16.100.100 | |
@@ -86,17 +89,22 @@ Weryfikacja połączenia
 
 ### Utrwalenie konfiguracji
 
-Dlaczego? Jak? Co? :)
+Aby zmienić addres ip używami komendy: ip addr add ip/maska dev interfejs - przydatne jeżeli DHCP został wyłączony
+
+Resetowanie usługi interfejsów: service networking restart
+
+Podgląd portów: netstat -ltpn 
+
 
 ### Warto wiedzieć
 
 -------------------------
 | Parametr | wartość | komentarz(opcionalny) |
 | ------------- |:-------------:| -----:|
-| Lokalizacja pliku z konfiguracją sieci| | |
-| UP -> Wyłączenie interfejsu sieciowego| | |
-| DOWN -> Włączenie interfejsu sieciowego| | |
-| Sprawdzenie obecnych parametrów | | |
+| Lokalizacja pliku z konfiguracją sieci| /etc/network/interfaces | |
+| UP -> Wyłączenie interfejsu sieciowego|ip link set eth1 up | |
+| DOWN -> Włączenie interfejsu sieciowego| ip link set eth1 down| |
+| Sprawdzenie obecnych parametrów |ip addr show eth0 |Za eth0 można podstawić inny interfejs |
 | lista wszystkich interfejsów | | |
 | Które interfejsy jakie porty słuchają | | |
 
