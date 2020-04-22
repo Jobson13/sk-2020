@@ -49,7 +49,7 @@ Wejściowe parametry sieci
 | MASKA  | 255.255.255.0 | |
 |   |  | |
 | PC 2  |  | |
-| IP - address  | 192.168.9.11 | |
+| IP - address  | 10.0.15.4 | |
 | MASKA  | 255.255.128.0 | |
 | PC 2  |  | |
 | IP - address  | 172.16.100.100 | |
@@ -70,21 +70,23 @@ Nowa statyczna konfiguracja
 | Parametr | wartość | komentarz(opcionalny) |
 | ------------- |:-------------:| -----:|
 |   PC 1 |  
-| IP - address  |  | |
-| MASKA  |  | |
+| IP - address  | 192.168.9.12 | |
+| MASKA  |255.255.255.0  | |
 |   |  | |
 | PC 2  |  | |
-| IP - address  |  | |
-| MASKA  |  | |
+| IP - address  | 10.0.2.15| |
+| MASKA  | 255.255.255.0 | |
+| IP - address  | 192.168.9.11 | |
+| MASKA  | 255.255.255.0 | |
 
 Weryfikacja połączenia
 ------------------------
 ||Maszyna1|Maszyna2.1|Maszyna2.2|
 | ------------- |:-------------:|:-----:|----:|
-|Polecenie|ping 10.0.15.6|ping 10.0.15.4||
-|Efekt|64 bytes from 10.0.15.6|64 bytes from 10.0.15.4||
-|Połączenie|Jest|Jest||
-|Internet|Nie ma|Nie ma||
+|Polecenie|ping 10.0.15.11|ping google.pl|192.168.9.12|
+|Efekt|64 bytes from 192.168.9.11|64 bytes from google.pl|64 bytes from 192.168.9.12|
+|Połączenie|Jest|Jest|jest|
+|Internet|Nie ma|Jest|Nie ma|
 -----------------------------
 
 ### Utrwalenie konfiguracji
@@ -105,6 +107,6 @@ Podgląd portów: netstat -ltpn
 | UP -> Wyłączenie interfejsu sieciowego|ip link set eth1 up | |
 | DOWN -> Włączenie interfejsu sieciowego| ip link set eth1 down| |
 | Sprawdzenie obecnych parametrów |ip addr show eth0 |Za eth0 można podstawić inny interfejs |
-| lista wszystkich interfejsów | | |
-| Które interfejsy jakie porty słuchają | | |
+| lista wszystkich interfejsów | ip a | |
+| Które interfejsy jakie porty słuchają | netstat | |
 
