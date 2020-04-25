@@ -22,10 +22,10 @@
 | subcommand    |  polecenie   | opis  |
 | ------------- |:-------------| :---------------| 
 |   ``addr``    |                               | infirmacje o adresacji i własnościach interfejsów |
-|               |   ``ip addr``                 | informacja o wszystkich interfejsach              |
-|               |   ``ip addr show dev enp0s3`` | informacja o konkretnym interfejsie               |
-|   ``link``    |                               |  |
-|   ``route``   |  | |
+|               |  ``ip addr``                 | informacja o wszystkich interfejsach              |
+|               |  ``ip addr show dev enp0s3`` | informacja o konkretnym interfejsie               |
+|   ``link``    |  ``ip link set eth0 up/down``| Włączenie/ wyłączenie interfejsu |
+|   ``route``   | ip route show  | |
 |   ``maddr``   |  | |
 |   ``neigh``   |  | |
 |   ``help``    |  | |
@@ -37,8 +37,8 @@
 
 1.
    * Przygotuj konfigurację sieci zgodnie z powyższym diagramem, 
-   * Przetestuj połączenie poleceniem ping
-   * Przetestuj połączenie z internetem
+   * Przetestuj połączenie poleceniem ping (JEST)
+   * Przetestuj połączenie z internetem (BRAK)
    * Sprawdź trasę dla połączeń z adresem IP z poza Twojej sieci lokalnej np. 1.1.1.1
 
 1.1
@@ -55,7 +55,7 @@
    * Przetestuj komunikację z ``localhost``  wykorzystując konsolowego klienta ``HTTP``, program ``curl``
 3.
    * Sprawdź który port został zarezerwowany dla komunikacji przez progrmam ``nginx``
-   * np. program ``netstat``
+   * np. program ``netstat`` (80)
 
 4.
    * Przetestuj komunikację z serwerem HTTP z poziomu komputera ``PC2``
