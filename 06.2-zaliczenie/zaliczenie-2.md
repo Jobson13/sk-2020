@@ -24,7 +24,7 @@ Projekt sieci spełnił oczekiwania, organizacja po uwzględnieniu nowych wymog�
  * Adresację linków pomiędzy routerami
  * Tablice routingów na poszczególnych routerach
  
- ![zadanie 2](Z.png)
+ ![zadanie 2](Zadanie2.png)
  
  # Sieci
 |Sieć           | Lan1 (Oddział firmy)  | Lan2 (Sieć Domowa) | Sieć Lan7 (Siedziba firmy) | Sieć Lan8 (Dział sprzedaży) | Sieć Lan9 (Dział ogólny)|
