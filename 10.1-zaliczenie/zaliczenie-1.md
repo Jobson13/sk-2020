@@ -53,4 +53,4 @@ W sieci pracują komputery biurowe oraz urządzenia siecowe współdzielące zas
       8. Dodano translację adresów publicznych na prywatne 'iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE'
       9. Uruchomiono PC0 i sprawdzono adres ip wraz z tablicą routingu
       ![Sprawdzenie ustawienia na PC0](Test.png)
-      10. Sprawdzono komunikację z google.pl 'ping google.pl'
+      10. Sprawdzono komunikację z 8.8.8.8 'ping 8.8.8.8'
