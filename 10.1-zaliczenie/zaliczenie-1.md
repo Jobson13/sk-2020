@@ -33,3 +33,23 @@ W sieci pracują komputery biurowe oraz urządzenia siecowe współdzielące zas
     4. Konfiguracja interfejsów sieciowych
     5. Inne jeżeli wykorzystane
 
+
+## Przebieg ćwiczenia
+   * Konfiguracja maszyn
+      1. Utworzono sieć w ustawieniach globalnych o nazwie ZADANIE i adresacji 10.10.0.0/22
+      2. Utworzono maszynę router i ustawiono interfejs 1 w tryb NAT oraz interfejs 2 w tryb sieć NAT i przyłączono do sieci ZADANIE
+      3. Utworzono maszynę PC0 i ustawiono interfejs 1 w tryb tryb sieć NAT i przyłączono do sieci ZADANIE
+      4. Uruchomiono obie maszyny
+   * Konfigurowanie środowiska na Routerze(Ustawienie DHCP i tablicy routingu)
+      1. Sprawdzeno połączenia z internetem komendą 'ping google.pl'
+      2. Pobrano serwera DHCP 'apk add dhcp'
+      3. Skonfigurowano dhcp w '/etc/dhcp/dhcpd.conf'
+      ![Konfiguracja_DHCP](Konfiguracja_DHCP.png)
+      4. Restart demona dhcp 'service dhcpd restart'
+      5. Skonfigurowano interfejsów w '/etc/network/interfaces'
+      ![Konfiguracja_interfejsów](Konfiguracja_interfejsów.png)
+      6. Skonfigurowano forwardowanie pakietów komendą 'sysctl net.ipv4.ip_forward=1'
+      7. Dodano programu iptables 'apk add iptables'
+      8. Dodano translację adresów publicznych na prywatne 'iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE'
+      9. Uruchomiono PC0 i sprawdzono adres ip wraz z tablicą routingu
+      ![Sprawdzenie ustawienia na PC0](Test.png)
