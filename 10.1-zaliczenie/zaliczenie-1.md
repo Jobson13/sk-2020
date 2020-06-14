@@ -39,6 +39,7 @@ W sieci pracują komputery biurowe oraz urządzenia siecowe współdzielące zas
       1. Utworzono sieć w ustawieniach globalnych o nazwie ZADANIE i adresacji 10.10.0.0/22
       2. Utworzono maszynę router i ustawiono interfejs 1 w tryb NAT oraz interfejs 2 w tryb sieć NAT i przyłączono do sieci ZADANIE
       3. Utworzono maszynę PC0 i ustawiono interfejs 1 w tryb tryb sieć NAT i przyłączono do sieci ZADANIE
+      4. Uruchomiono obie maszyny
    * Konfigurowanie środowiska na Routerze(Ustawienie DHCP i tablicy routingu)
       1. Sprawdzeno połączenia z internetem komendą 'ping google.pl'
       2. Pobrano serwera DHCP 'apk add dhcp'
@@ -52,12 +53,4 @@ W sieci pracują komputery biurowe oraz urządzenia siecowe współdzielące zas
       8. Dodano translację adresów publicznych na prywatne 'iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE'
       9. Uruchomiono PC0 i sprawdzono adres ip wraz z tablicą routingu
       ![Sprawdzenie ustawienia na PC0](Test.png)
-      10. Sprawdzono komunikację z google.pl 'ping google.pl'
-   * Konfigurowanie DNS
-      1. Pobrano DNS 'apk add dnsmasq'
-      2. Uruchomiono DNS 'service dnsmasq start'
-      3. Uruchomiono 'ping google.pl'
-      4. Dodano wpisy do '/etc/hosts'
-         10.10.0.1   router.mojaorganizacja.pl
-         10.10.0.2   erp.mojaorganizacja.pl
-         10.10.0.3   drukarka.mojaorganizacja.pl
+      10. Sprawdzono komunikację z 8.8.8.8 'ping 8.8.8.8'
